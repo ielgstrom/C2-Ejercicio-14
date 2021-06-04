@@ -6,7 +6,16 @@ const mapboxToken = ""; // Mete aquí el Token de Mapbox
 const tmbApi = "https://api.tmb.cat/v1/planner/plan";
 const appId = ""; // Mete aquí el app_id de TMB
 const appKey = ""; // Mete aquí el app_key de TMB
+const mapboxgl = ('mapbox-gl/dist/mapbox-gl.css');
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmFyb3NxdWl4eiIsImEiOiJja3BpN3p4dTkwZ20zMm9wY3I3Nm03M3hmIn0.FHmrjm4s8vS_ZGUCLYZayg';
+const map = new mapboxgl.Map({
+  container: 'YOUR_CONTAINER_ELEMENT_ID',
+  style: 'mapbox://styles/mapbox/streets-v11'
+});
 mapboxgl.accessToken = mapboxToken;
+
+
 
 // LLama a esta función para generar el pequeño mapa que sale en cada paso
 // Le tienes que pasar un array con las dos coordenadas y el elemento HTML donde tiene que generar el mapa
@@ -30,3 +39,5 @@ const coordenadas = {
     longitud: 0,
   },
 };
+
+
