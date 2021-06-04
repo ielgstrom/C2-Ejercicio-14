@@ -2,10 +2,11 @@
 
 // Datos para las APIs
 const geocodingApi = "https://api.mapbox.com/geocoding/v5/mapbox.places/";
-const mapboxToken = ""; // Mete aquí el Token de Mapbox
+const mapboxToken =
+  "pk.eyJ1IjoiYmFyb3NxdWl4eiIsImEiOiJja3BpODRhN28wMGJ6MnBuaTN5NmN4ZWR1In0.PhqZXoAD4H3HdtHRlY3Dcw"; // Mete aquí el Token de Mapbox
 const tmbApi = "https://api.tmb.cat/v1/planner/plan";
-const appId = ""; // Mete aquí el app_id de TMB
-const appKey = ""; // Mete aquí el app_key de TMB
+const appId = "https://api.tmb.cat/v1/planner/plan? app_id=&app_key=&b9fcb5f5"; // Mete aquí el app_id de TMB
+const appKey = "9aa6e03d06e9c2fccd6c3cfe598bb58e"; // Mete aquí el app_key de TMB
 mapboxgl.accessToken = mapboxToken;
 
 // LLama a esta función para generar el pequeño mapa que sale en cada paso
