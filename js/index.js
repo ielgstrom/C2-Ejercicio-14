@@ -9,6 +9,29 @@ const appId = ""; // Mete aquí el app_id de TMB
 const appKey = ""; // Mete aquí el app_key de TMB
 mapboxgl.accessToken = mapboxToken;
 
+// aqui hacemos que aparezca una barra de busqueda en los botones
+const formulario = document.querySelector("form");
+formulario.querySelector("#a-direccion").addEventListener("change", (b) => {
+  if (b.target.value === "on") {
+    formulario.querySelector(".a-direccion-definitiva").classList.add("on");
+  }
+});
+formulario.querySelector("#a-mi-ubicacion").addEventListener("change", (e) => {
+  if (e.target.value === "on") {
+    formulario.querySelector(".a-direccion-definitiva").classList.remove("on");
+  }
+});
+formulario.querySelector("#de-direccion").addEventListener("change", (e) => {
+  if (e.target.value === "on") {
+    formulario.querySelector(".de-direccion-definitiva").classList.add("on");
+  }
+});
+formulario.querySelector("#de-mi-ubicacion").addEventListener("change", (e) => {
+  if (e.target.value === "on") {
+    formulario.querySelector(".de-direccion-definitiva").classList.remove("on");
+  }
+});
+
 // LLama a esta función para generar el pequeño mapa que sale en cada paso
 // Le tienes que pasar un array con las dos coordenadas y el elemento HTML donde tiene que generar el mapa
 const generaMapa = (coordenadas, mapa) => {
