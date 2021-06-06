@@ -93,6 +93,11 @@ const queParadaEs = (datos) => {
     nuevaIndicacion.classList.remove(".paso-dummy");
     Indicacion.querySelector(".paso-numero").TextContent = ruta.distance;
     console.log(ruta[tramos]);
+    document.querySelector(".paso-hora").TextContent = ruta[tramos].endTime;
+    document.querySelector(".dato-paso-duracion").TextContent =
+      ruta[tramos].duration;
+    document.querySelector(".dato-paso-distancia").TextContent =
+      ruta[tramos].distance;
     Indicacion.append(nuevaIndicacion);
   }
 };
